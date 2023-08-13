@@ -35,6 +35,7 @@ open class LNFloatingActionButtonEllipseCell: LNFloatingActionButtonCell {
     private let imageView = UIImageView()
     override open var image: UIImage? {
         didSet {
+            imageView.contentMode = .scaleAspectFit
             imageView.image = image
             addImageView()
         }
