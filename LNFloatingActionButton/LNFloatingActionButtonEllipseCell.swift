@@ -43,6 +43,7 @@ open class LNFloatingActionButtonEllipseCell: LNFloatingActionButtonCell {
     
     private let titleLabel = PaddingLabel()
     open var titleMargin: CGFloat = 4.0
+    open var titleFont: UIFont = UIFont.boldSystemFont(ofSize: 15)
     open var cellPadding: CGFloat = 10.0
     open var titleTextAlignment = TitleTextAlignment.right {
         didSet {
@@ -65,6 +66,7 @@ open class LNFloatingActionButtonEllipseCell: LNFloatingActionButtonCell {
     open var title: String? = nil {
         didSet {
             titleLabel.text = title
+            titleLabel.font = titleFont
             titleLabel.sizeToFit()
             addTitleLabel()
         }
